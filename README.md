@@ -23,7 +23,6 @@ Suivez les étapes ci-dessous pour installer et utiliser GPT-NSI sur votre machi
 
 - Python 3.8 ou une version ultérieure
 - `pip` (gestionnaire de paquets Python)
-- Une clé API GPT (par exemple, OpenAI ou autre système compatible)
 
 ### Installation
 
@@ -37,43 +36,3 @@ Suivez les étapes ci-dessous pour installer et utiliser GPT-NSI sur votre machi
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Configurez votre clé API :
-   - Créez un fichier `.env` à la racine du projet.
-   - Ajoutez la ligne suivante dans le fichier :
-     ```
-     API_KEY=your_openai_api_key
-     ```
-
-4. Lancez l’application :
-   ```bash
-   python main.py
-   ```
-
-### Utilisation
-
-- L'application propose une interface en ligne de commande (CLI) et/ou une interface web pour interagir avec le modèle GPT.
-- Posez des questions ou saisissez des problèmes liés au programme NSI pour obtenir des solutions générées par l'IA, des extraits de code ou des explications détaillées.
-
-## Contribution
-
-Les contributions sont les bienvenues ! Suivez ces étapes pour contribuer :
-
-1. **Forkez** le dépôt.
-2. Créez une nouvelle branche :
-   ```bash
-   git checkout -b feature/votre-nouvelle-fonctionnalité
-   ```
-3. Apportez vos modifications et validez-les :
-   ```bash
-   git commit -m "Ajout de votre fonctionnalité"
-   ```
-4. Poussez vos modifications :
-   ```bash
-   git push origin feature/votre-nouvelle-fonctionnalité
-   ```
-5. Soumettez une **pull request**.
-
-## Licence
-
-Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
