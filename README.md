@@ -1,3 +1,5 @@
+https://magazine.sebastianraschka.com/p/ahead-of-ai-8-the-latest-open-source
+
 # GPT-NSI
 
 ![License](https://img.shields.io/github/license/Mizmalik/GPT-NSI)  
