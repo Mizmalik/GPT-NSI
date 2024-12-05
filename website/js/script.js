@@ -1,52 +1,39 @@
-const apiUrl = "http://127.0.0.1:5000/generate";
-const chatContainer = document.getElementById("chat-container");
 const inputElement = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
-
-function typeMessage(content, type) {
-    const messageDiv = document.createElement("div");
-    messageDiv.classList.add("message", type === "user" ? "user-message" : "ia-message");
-    chatContainer.appendChild(messageDiv);
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-
-    let index = 0;
-    function typeNextCharacter() {
-        if (index < content.length) {
-            messageDiv.textContent += content.charAt(index);
-            index++;
-            setTimeout(typeNextCharacter, 50);
-        }
-    }
-    typeNextCharacter();
-}
-
-function sendMessage() {
-    const userInput = inputElement.value.trim();
-    if (!userInput) return;
-
-    typeMessage(userInput, "user");
-
-    fetch(apiUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ input: userInput, language: "en" }),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.error) {
-                typeMessage("Erreur : " + data.error, "ia");
-            } else {
-                typeMessage(data.generated, "ia");
-            }
-        })
-        .catch(() => {
-            typeMessage("Erreur de connexion.", "ia");
-        });
-
-    inputElement.value = "";
-}
+const chatContainer = document.getElementById("chat-container");
+const toggle = document.getElementById("toggle");
 
 sendButton.addEventListener("click", sendMessage);
 inputElement.addEventListener("keydown", (e) => {
     if (e.key === "Enter") sendMessage();
 });
+
+toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode", toggle.checked);
+});
+
+function sendMessage() {
+    const userMessage = inputElement.value.trim();
+    if (userMessage !== "") {
+        addMessage(userMessage, "user");
+        inputElement.value = "";
+        // Simulating a bot response after a delay
+        setTimeout(() => {
+            addMessage("This is a bot response.", "bot");
+        }, 1000);
+    }
+}
+
+function addMessage(message, sender) {
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("chat-message", sender);
+
+    const messageContent = document.createElement("div");
+    messageContent.classList.add("message-content");
+    messageContent.textContent = message;
+
+    messageElement.appendChild(messageContent);
+    chatContainer.appendChild(messageElement);
+
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
