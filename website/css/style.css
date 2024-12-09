@@ -51,7 +51,6 @@ body {
 }
 
 .chat-header h1 {
-    color: #4a4a4a; /* Default dark gray */
     flex-grow: 1;
     text-align: center;
 }
@@ -168,7 +167,7 @@ body.dark-mode #send-button {
     border: none;
     padding: 12px;
     margin-left: 12px;
-    border-radius: 50%;
+    border-radius: 30%;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
 }
@@ -221,7 +220,7 @@ body.dark-mode #send-button {
     display: inline-block;
     width: 60px;  /* Taille réduite */
     height: 26px; /* Taille réduite */
-    margin-right: 50px; /* Ajusté pour l'alignement */
+    margin-right: 25px; /* Ajusté pour l'alignement */
     -webkit-transform: scale(2);  /* Réduit le zoom */
     transform: scale(2);  /* Réduit le zoom */
 }
@@ -289,7 +288,7 @@ input:checked + .slider:before{
     height: 3px;  /* Taille réduite */
     border-radius: 50%;
     bottom: 60%;
-    right: 14%;
+    right: 28%;
     box-shadow:
       -6px 5px 0 2px var(--crater),
       1px 8px 0 var(--crater);
@@ -360,7 +359,7 @@ input:checked + .slider .star::after{
     -webkit-transform: rotate(60deg);
     transform: rotate(60deg);
     top: -6px;
-    left: -3px;
+    left: -6px;
 }
 
 .slider.round {
