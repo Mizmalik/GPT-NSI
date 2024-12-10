@@ -269,9 +269,7 @@ input:checked + .slider{
 
 input:checked + .slider:before{
     background: var(--moon);
-    -webkit-transform: translateX(150%);
-    -ms-transform: translateX(150%);
-    transform: translateX(150%);
+    transform: translateX(175%);
     box-shadow:
       inset 0 -1px 2px var(--moon-shadow),
       0 1px 2px var(--shadow-03),
@@ -287,8 +285,8 @@ input:checked + .slider:before{
     width: 3px;   /* Taille réduite */
     height: 3px;  /* Taille réduite */
     border-radius: 50%;
-    bottom: 60%;
-    right: 28%;
+    bottom: 63%;
+    right: 20%;
     box-shadow:
       -6px 5px 0 2px var(--crater),
       1px 8px 0 var(--crater);
@@ -386,4 +384,76 @@ input:checked + .slider .star::after{
       -24px 2px 0 6px var(--cloud);
     -webkit-transition: .4s;
     transition: .4s;
+}
+
+/* Bulles de message */
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.user {
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.bot {
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+.message-content {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 12px 16px;
+    border-radius: 20px;
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user .message-content {
+    background-color: #007bff; /* Couleur des messages utilisateur */
+    color: white;
+}
+
+.bot .message-content {
+    background-color: #e9ecef; /* Couleur des messages du bot */
+    color: #333;
+}
+
+/* Ajout d'une petite animation */
+.chat-message {
+    opacity: 0;
+    animation: fadeInMessage 0.3s forwards;
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Barre clignotante uniquement pendant la frappe */
+.message-content.typing::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }

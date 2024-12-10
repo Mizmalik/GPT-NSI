@@ -1,40 +1,21 @@
-https://magazine.sebastianraschka.com/p/ahead-of-ai-8-the-latest-open-source
+# Projet GPT NSI
 
-# GPT-NSI
+Le projet **GPT NSI** est une application web basée sur les **LLM** (larged language model) qui utilise un dataset inspiré par **Homer Simpson** pour générer des réponses. Ce projet a pour objectif de permettre aux utilisateurs d'interagir avec une ia (intelligence artificiel) enrichie des caractéristiques et de l'humour du personnage de Homer Simpson, tout en offrant une interface web simple pour une expérience agréable.
 
-![License](https://img.shields.io/github/license/Mizmalik/GPT-NSI)  
-![Issues](https://img.shields.io/github/issues/Mizmalik/GPT-NSI)  
-![Stars](https://img.shields.io/github/stars/Mizmalik/GPT-NSI)  
+## Objectifs du projet
 
-GPT-NSI est un projet conçu pour exploiter les capacités avancées du traitement du langage naturel (NLP) dans le cadre des **Numériques et Sciences Informatiques (NSI)**. Il s'adresse particulièrement aux étudiants, enseignants et développeurs travaillant sur des sujets éducatifs ou pratiques en lien avec l'informatique.
+- **Dataset** : Le dataset est inspiré par le personnage emblématique de **Homer Simpson** de la série *Les Simpsons*
+- **Interface web intuitive** : L'application propose une interface graphique facile à utiliser, permettant à l'utilisateur de poser des questions ou de discuter avec l'IA dans un style inspiré de Homer Simpson.
 
-Ce dépôt contient des ressources, du code et des outils basés sur des systèmes d'IA comme GPT, pour aider à mieux comprendre et résoudre des problématiques liées au programme NSI.
+## Fonctionnalités principales
 
-## Fonctionnalités
+1. **Chat interactif** : L'utilisateur peut discuter avec l'IA en utilisant des phrases et des dialogues caractéristiques d'Homer Simpson. L'IA répondra avec des références de la série, des blagues et des répliques emblématiques.
+2. **Réponses comiques et contextuelles** : L'IA génère des réponses en se basant sur l'humour, les comportements et les dialogues de Homer Simpson, en réagissant de manière exagérée ou absurde comme le ferait le personnage.
+3. **Interface web facile à utiliser** : L'application dispose d'une interface claire et simple, permettant à l'utilisateur de saisir des messages et d'afficher les réponses générées par l'IA en temps réel.
 
-- **Assistance basée sur l'IA** : Exploitez des modèles basés sur GPT pour expliquer, résoudre ou générer du code et des concepts liés au programme NSI.
-- **Base de code personnalisable** : Adaptez les modèles GPT et leur comportement à vos besoins spécifiques.
-- **Focus éducatif** : Contenu spécialement conçu pour aider dans les domaines du programme NSI tels que la programmation, les algorithmes et la résolution de problèmes.
-- **Open Source** : Contributions bienvenues pour enrichir le projet.
+## Technologies utilisées
 
-## Prise en main
-
-Suivez les étapes ci-dessous pour installer et utiliser GPT-NSI sur votre machine locale :
-
-### Prérequis
-
-- Python 3.8 ou une version ultérieure
-- `pip` (gestionnaire de paquets Python)
-
-### Installation
-
-1. Clonez ce dépôt :
-   ```bash
-   git clone https://github.com/Mizmalik/GPT-NSI.git
-   cd GPT-NSI
-   ```
-
-2. Installez les dépendances requises :
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **GPT (Generative Pre-trained Transformer)** : Le modèle GPT est utilisé pour générer des réponses cohérentes et humoristiques, en se basant sur des dialogues et des citations d'Homer Simpson.
+- **Dataset Homer Simpson** : Un corpus composé des citations, répliques et comportements d'Homer Simpson, extrait des épisodes de la série *Les Simpsons*.
+- **Frontend** : Développé avec des technologies modernes comme **HTML**, **CSS**, et **JavaScript** pour créer une interface interactive et responsive.
+- **Backend** : Le backend utilise une API avec Flask pour traiter les requêtes de l'utilisateur et communiquer avec le modèle GPT pour générer des réponses.
