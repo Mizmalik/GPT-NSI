@@ -59,5 +59,7 @@ Le projet **GPT NSI** est une application web interactive basée sur les **LLM**
 
 - **Frontend** : Une interface simple avec un champ de saisie et un bouton d'envoi.
 - **Backend** : Reçoit les requêtes de l'utilisateur, génère des réponses via le modèle et renvoie les résultats en JSON.
-  
+
+---
+
 N'hésitez pas à explorer, discuter et vous amuser avec ce projet basé sur le style unique d'Homer Simpson ! 🍩
