@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify  # Flask pour créer l'API
-from flask_cors import CORS  # Gestion des requêtes cross-origin
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import torch
 import os
 from model import *  # Import du modèle défini séparément
